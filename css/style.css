@@ -1,3 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "roboto";
+}
 
+/*GENERAL*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --primary-color: #9356DC;
+  --secondary-color: #FF79DA;
+  --btn-color: #99E2D0;
+  --padding-side: 20px ;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 5px 30px rgba(89, 89, 89, 0.4);
+}
+.header img {
+  height: 30px;
+  width: 165px;
+  padding: 20px 0 15px 0;
+}
+
+.location {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(223, 223, 222, 0.7);
+}
+.location span {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.location h6 {
+  font-size: 14px;
+  position: relative;
+}
+
+.section_1 {
+  background-color: #F2F2F2;
+}
+.section_1 article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_1 article h2 {
+  margin: 50px 0 25px 0;
+  text-align: center;
+  width: 60%;
+  font-size: 22px;
+  font-weight: 800;
+}
+.section_1 article P {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+}
+.section_1 article button {
+  margin: 35px 0 60px 0;
+  height: 50px;
+  width: 220px;
+  border: none;
+  border-radius: 25px;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 700;
+  background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+  box-shadow: 0px 5px 10px lightgrey;
+}
+
+.section_2 {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0;
+  align-items: center;
+  padding: 0 var(--padding-side);
+}
+.section_2 h3 {
+  width: 100%;
+  align-self: flex-start;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.section_2 button {
+  margin-left: 10px;
+  position: relative;
+  width: 320px;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 5px 10px lightgrey;
+  margin-bottom: 20px;
+}
+.section_2 button .number {
+  height: 20px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  padding-top: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -12px;
+  color: #FFF;
+}
+.section_2 button .icone {
+  font-size: 16px;
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main_restaurant {
+  background-color: #F2F2F2;
+  padding: 0 20px 60px 20px;
+}
+.main_restaurant h3 {
+  margin: 0;
+  padding: 60px 0 30px 0;
+}
+.main_restaurant .card_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_restaurant {
+  position: relative;
+  height: 250px;
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.card_restaurant::after {
+  content: "Nouveau";
+  padding-top: 10px;
+  padding-left: 10px;
+  color: green;
+  width: 75px;
+  height: 30px;
+  background-color: var(--btn-color);
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border-radius: 3px;
+}
+.card_restaurant img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+}
+.card_restaurant article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0px 5px 10px lightgrey;
+  height: 80px;
+}
+.card_restaurant .card_title {
+  margin: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card_restaurant .card_title h4 {
+  margin: 0;
+}
+.card_restaurant .card_title p {
+  margin: 0;
+}
+
+.card_heart {
+  height: 25px;
+  width: 25px;
+  margin-right: 25px;
+  position: relative;
+}
+.card_heart .heart_1, .card_heart .heart_2 {
+  font-size: 25px;
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+.card_heart .heart_1 {
+  transform: scale(0);
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #483D3E;
+}
+.footer h2 {
+  padding: 20px 0 20px 30px;
+  font-family: "Shrikhand";
+  color: #FFF;
+}
+.footer_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  color: #fff;
+}
+.footer li {
+  margin-bottom: 8px;
+  list-style: none;
+}
+.footer li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/*--MEDIA QUERIES--*/
+@media screen and (min-width: 500px) {
+  .header img {
+    height: 50px;
+    width: auto;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .location h6 {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .section_wrapper {
+    display: flex;
+    margin: 40px 5%;
+  }
+  .section_wrapper .section_1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    width: 70%;
+    min-width: 375px;
+  }
+  .section_wrapper .section_2 {
+    flex: 1;
+  }
+
+  .main_restaurant .card_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .main_restaurant .card_restaurant {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .section_wrapper .section_1 {
+    max-width: 500px;
+  }
+  .section_wrapper .section_1 h2 {
+    font-size: 35px;
+    width: 70%;
+  }
+  .section_wrapper .section_1 P {
+    font-size: 15px;
+  }
+  .section_wrapper .section_1 button {
+    height: 75px;
+    width: 330px;
+    border-radius: 50px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .main_restaurant .card_wrapper {
+    max-width: 1500px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
